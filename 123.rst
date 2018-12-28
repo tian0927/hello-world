@@ -1,0 +1,15 @@
+#coding=utf-8
+
+from docx import Document
+from docx.shared import Pt
+from docx.oxml.ns import qn
+
+test=Document()
+
+p = test.add_paragraph(u'第一段文字!')
+
+run= p.add_run(u'\n24号字体!')
+run.font.size = Pt(24)
+
+
+test.save(u'C:/Users/123.docx)
