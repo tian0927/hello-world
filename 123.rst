@@ -5,4 +5,4 @@
 三级标题
 ^^^^^^^^^
 
-https://github.com/tian0927/hello-world/raw/master/1.jpg
+.. image:: https://github.com/tian0927/hello-world/raw/master/1.jpg
