@@ -1,0 +1,56 @@
+使用pyboard读取bh1750 光照传感器信息
+=====================================
+模块介绍
+------------------
+BH1750FVI 是一种用于两线式串行总线接口的数字型光强度传感器集成电路。这种集成电路可以根据收集的光线强度数据来调整液晶或者键盘背景灯的亮度。利用它的高分辨率可以探测较大范围的光强度变化。（1lx-65535lx）两个模块通过连接线相连。
+
+.. image:: https://github.com/tian0927/hello-world/raw/master/gz1.png
+
+查找bh1750 指令集
+
+.. image:: https://github.com/tian0927/hello-world/raw/master/gz2.png
+
+
+.. image:: https://github.com/tian0927/hello-world/raw/master/gz3.png
+
+从“写指示”到“读出测量结果”的测量时序实例：
+
+.. image:: https://github.com/tian0927/hello-world/raw/master/gz4.png
+
+.. image:: https://github.com/tian0927/hello-world/raw/master/gz5.png
+
+编程学习
+------------------
+在main.py中编程引用库函数：
+
+.. image:: https://github.com/tian0927/hello-world/raw/master/gz6.png
+
+定义bh1750类，定义各种模式;
+
+.. image:: https://github.com/tian0927/hello-world/raw/master/gz7.png
+
+初始化函数：
+
+.. image:: https://github.com/tian0927/hello-world/raw/master/gz8.png
+
+设模式函数：
+
+.. image:: https://github.com/tian0927/hello-world/raw/master/gz9.png
+
+测量函数：
+
+.. image:: https://github.com/tian0927/hello-world/raw/master/gz10.png
+
+初始化I2C 并循环测量：
+
+.. image:: https://github.com/tian0927/hello-world/raw/master/gz11.png
+
+实验现象
+------------------
+按RST按键重启pyboard，加载程序。打开终端输入
+sudo picocom /dev/ttyACM0命令，就可看到读取的光照强度数值。
+
+根据数据可发现光照越强数值越大
+
+.. image:: https://github.com/tian0927/hello-world/raw/master/gz12.png
+
