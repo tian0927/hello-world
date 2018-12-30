@@ -52,26 +52,24 @@ leds = [pyb.LED(i) for i in range(1,5)]
 ------------------
     在上面的部分中，我们已经实现了基本的跑马灯操作，而在这里，我们将简要的介绍一下Typeboard的按键函数与中断函数，并编写一个按下按钮后四个灯全亮的程序。
     首先，我们需要实例化一个中断，代码如下：
-
-                                               **sw=pyb.Switch()**         
+ ::
+ 
+    **sw=pyb.Switch()**         
 
     之后，我们将四个灯全亮的程序写入一个名为test的函数中，在该函数中，依次对LED灯调用LED.on()函数，将其点亮：
-
-                                                 def test():
-
-                                                 pyb.LED(1).on()
-
-                                                 pyb.LED(2).on()
-
-                                                 pyb.LED(3).on()
-
-                                                 pyb.LED(4).on()
-
-                                                 pyb.delay(2000)
+ ::
+ 
+    def test():
+        pyb.LED(1).on()
+        pyb.LED(2).on()
+        pyb.LED(3).on()
+        pyb.LED(4).on()
+        pyb.delay(2000)
 
     之后调用Switch类中的callback方法，在每次按下按钮后都将调用test()函数。
-
-                                                 sw.callback(test)
+    ::
+    
+    sw.callback(test)
 
     注意，扩展内容的代码必须放在跑马灯代码之前才有效。
 
