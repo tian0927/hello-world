@@ -19,9 +19,9 @@
 如果要实现呼吸灯，则需要一个while循环来对intensity不断的赋值，完成一次循环后延时10ms。其代码如下：
 
  :: 
-      led = pyb.LED(4)
-      intensity = 0
-      while True:
+     led = pyb.LED(4)
+     intensity = 0
+     while True:
          intensity = (intensity + 1) % 255
          led.intensity(intensity)
          pyb.delay(10) 
