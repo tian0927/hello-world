@@ -6,8 +6,12 @@ ESP32 采用两个哈佛结构 Xtensa LX6 CPU 构成双核系统。所有的片�
 
 两个 CPU 的名称分别是“PRO_CPU”和“APP_CPU”。PRO 代表“protocol（协议）”，APP 代表“application （应用）”。在大多数情况下，两个 CPU 的功能是相同的。
 
+.. image:: https://github.com/tian0927/hello-world/raw/master/WiFi01.jpg
+
+.. image:: https://github.com/tian0927/hello-world/raw/master/WiFi02.jpg
+
 编程学习
-------------------
+-----------------
 打开main.py文件开始编写代码：导入头文件：
  ::
 
