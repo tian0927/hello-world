@@ -4,7 +4,7 @@
 ------------------
 DHT11是一款有已校准数字信号输出的温湿度传感器。其精度湿度+-5%RH，温度+-2℃，量程湿度20-90%RH，温度0~50℃。下面详细讲解使用pyboard读取dht11温湿度传感器信息的过程。
 
-.. image:: https://github.com/tian0927/hello-world/raw/master/ws00.ipg
+.. image:: https://github.com/tian0927/hello-world/raw/master/ws00.jpg
 
 编程学习
 ------------------
